@@ -29,12 +29,16 @@ namespace PetrolİstasyonSistemi_18
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbl_gaz = new System.Windows.Forms.Label();
+            this.rdbtn_Gaz = new System.Windows.Forms.RadioButton();
+            this.rdbtn_EcoforceMotorin = new System.Windows.Forms.RadioButton();
+            this.rdbtn_UltraforceMotorin = new System.Windows.Forms.RadioButton();
+            this.rdbtn_Kursunsuz95 = new System.Windows.Forms.RadioButton();
+            this.lbl_Gaz = new System.Windows.Forms.Label();
             this.lbl_ecoforceMotorin = new System.Windows.Forms.Label();
-            this.lbl_ultraforceMotorin = new System.Windows.Forms.Label();
-            this.lbl_kursunsuzBenzin = new System.Windows.Forms.Label();
+            this.lbl_UltraforceMotorin = new System.Windows.Forms.Label();
+            this.lbl_Kursunsuz95 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,17 +50,14 @@ namespace PetrolİstasyonSistemi_18
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.progress_Arac1 = new System.Windows.Forms.ProgressBar();
-            this.label23 = new System.Windows.Forms.Label();
             this.progress_Arac4 = new System.Windows.Forms.ProgressBar();
             this.label24 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.progress_Arac3 = new System.Windows.Forms.ProgressBar();
             this.label17 = new System.Windows.Forms.Label();
-            this.progress_Arac5 = new System.Windows.Forms.ProgressBar();
             this.progress_Arac2 = new System.Windows.Forms.ProgressBar();
             this.txt_Ultraforce95Litre = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -91,19 +92,30 @@ namespace PetrolİstasyonSistemi_18
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.txt_GazPlaka = new System.Windows.Forms.TextBox();
             this.dataGrid1 = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btn_Login = new System.Windows.Forms.Button();
+            this.txt_Password = new System.Windows.Forms.TextBox();
+            this.txt_Username = new System.Windows.Forms.TextBox();
+            this.lbl_Password = new System.Windows.Forms.Label();
+            this.lbl_Username = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lbl_gaz);
+            this.groupBox1.Controls.Add(this.rdbtn_Gaz);
+            this.groupBox1.Controls.Add(this.rdbtn_EcoforceMotorin);
+            this.groupBox1.Controls.Add(this.rdbtn_UltraforceMotorin);
+            this.groupBox1.Controls.Add(this.rdbtn_Kursunsuz95);
+            this.groupBox1.Controls.Add(this.lbl_Gaz);
             this.groupBox1.Controls.Add(this.lbl_ecoforceMotorin);
-            this.groupBox1.Controls.Add(this.lbl_ultraforceMotorin);
-            this.groupBox1.Controls.Add(this.lbl_kursunsuzBenzin);
+            this.groupBox1.Controls.Add(this.lbl_UltraforceMotorin);
+            this.groupBox1.Controls.Add(this.lbl_Kursunsuz95);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -112,96 +124,152 @@ namespace PetrolİstasyonSistemi_18
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(39, 12);
+            this.groupBox1.Location = new System.Drawing.Point(293, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(273, 280);
+            this.groupBox1.Size = new System.Drawing.Size(282, 291);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Yakıt Fiyat Listesi";
+            this.groupBox1.Text = "Yakıt Fiyat Tablosu";
             // 
-            // lbl_gaz
+            // rdbtn_Gaz
             // 
-            this.lbl_gaz.AutoSize = true;
-            this.lbl_gaz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_gaz.ForeColor = System.Drawing.Color.White;
-            this.lbl_gaz.Location = new System.Drawing.Point(153, 219);
-            this.lbl_gaz.Name = "lbl_gaz";
-            this.lbl_gaz.Size = new System.Drawing.Size(30, 17);
-            this.lbl_gaz.TabIndex = 9;
-            this.lbl_gaz.Text = "null";
+            this.rdbtn_Gaz.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbtn_Gaz.BackColor = System.Drawing.Color.DodgerBlue;
+            this.rdbtn_Gaz.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.rdbtn_Gaz.Location = new System.Drawing.Point(23, 211);
+            this.rdbtn_Gaz.Name = "rdbtn_Gaz";
+            this.rdbtn_Gaz.Size = new System.Drawing.Size(43, 24);
+            this.rdbtn_Gaz.TabIndex = 41;
+            this.rdbtn_Gaz.Text = "4-";
+            this.rdbtn_Gaz.UseVisualStyleBackColor = false;
+            // 
+            // rdbtn_EcoforceMotorin
+            // 
+            this.rdbtn_EcoforceMotorin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbtn_EcoforceMotorin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.rdbtn_EcoforceMotorin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.rdbtn_EcoforceMotorin.Location = new System.Drawing.Point(23, 166);
+            this.rdbtn_EcoforceMotorin.Name = "rdbtn_EcoforceMotorin";
+            this.rdbtn_EcoforceMotorin.Size = new System.Drawing.Size(43, 22);
+            this.rdbtn_EcoforceMotorin.TabIndex = 40;
+            this.rdbtn_EcoforceMotorin.Text = "3-";
+            this.rdbtn_EcoforceMotorin.UseVisualStyleBackColor = false;
+            // 
+            // rdbtn_UltraforceMotorin
+            // 
+            this.rdbtn_UltraforceMotorin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbtn_UltraforceMotorin.BackColor = System.Drawing.Color.DodgerBlue;
+            this.rdbtn_UltraforceMotorin.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.rdbtn_UltraforceMotorin.Location = new System.Drawing.Point(23, 118);
+            this.rdbtn_UltraforceMotorin.Name = "rdbtn_UltraforceMotorin";
+            this.rdbtn_UltraforceMotorin.Size = new System.Drawing.Size(43, 22);
+            this.rdbtn_UltraforceMotorin.TabIndex = 39;
+            this.rdbtn_UltraforceMotorin.Text = "2-";
+            this.rdbtn_UltraforceMotorin.UseVisualStyleBackColor = false;
+            // 
+            // rdbtn_Kursunsuz95
+            // 
+            this.rdbtn_Kursunsuz95.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.rdbtn_Kursunsuz95.BackColor = System.Drawing.Color.DodgerBlue;
+            this.rdbtn_Kursunsuz95.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.rdbtn_Kursunsuz95.Location = new System.Drawing.Point(23, 85);
+            this.rdbtn_Kursunsuz95.Name = "rdbtn_Kursunsuz95";
+            this.rdbtn_Kursunsuz95.Size = new System.Drawing.Size(43, 23);
+            this.rdbtn_Kursunsuz95.TabIndex = 38;
+            this.rdbtn_Kursunsuz95.Text = "1-";
+            this.rdbtn_Kursunsuz95.UseVisualStyleBackColor = false;
+            // 
+            // lbl_Gaz
+            // 
+            this.lbl_Gaz.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Gaz.AutoSize = true;
+            this.lbl_Gaz.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_Gaz.ForeColor = System.Drawing.Color.White;
+            this.lbl_Gaz.Location = new System.Drawing.Point(185, 213);
+            this.lbl_Gaz.Name = "lbl_Gaz";
+            this.lbl_Gaz.Size = new System.Drawing.Size(30, 17);
+            this.lbl_Gaz.TabIndex = 9;
+            this.lbl_Gaz.Text = "null";
             // 
             // lbl_ecoforceMotorin
             // 
+            this.lbl_ecoforceMotorin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbl_ecoforceMotorin.AutoSize = true;
             this.lbl_ecoforceMotorin.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_ecoforceMotorin.ForeColor = System.Drawing.Color.White;
-            this.lbl_ecoforceMotorin.Location = new System.Drawing.Point(153, 168);
+            this.lbl_ecoforceMotorin.Location = new System.Drawing.Point(185, 167);
             this.lbl_ecoforceMotorin.Name = "lbl_ecoforceMotorin";
             this.lbl_ecoforceMotorin.Size = new System.Drawing.Size(30, 17);
             this.lbl_ecoforceMotorin.TabIndex = 8;
             this.lbl_ecoforceMotorin.Text = "null";
             // 
-            // lbl_ultraforceMotorin
+            // lbl_UltraforceMotorin
             // 
-            this.lbl_ultraforceMotorin.AutoSize = true;
-            this.lbl_ultraforceMotorin.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_ultraforceMotorin.ForeColor = System.Drawing.Color.White;
-            this.lbl_ultraforceMotorin.Location = new System.Drawing.Point(153, 119);
-            this.lbl_ultraforceMotorin.Name = "lbl_ultraforceMotorin";
-            this.lbl_ultraforceMotorin.Size = new System.Drawing.Size(30, 17);
-            this.lbl_ultraforceMotorin.TabIndex = 7;
-            this.lbl_ultraforceMotorin.Text = "null";
+            this.lbl_UltraforceMotorin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_UltraforceMotorin.AutoSize = true;
+            this.lbl_UltraforceMotorin.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_UltraforceMotorin.ForeColor = System.Drawing.Color.White;
+            this.lbl_UltraforceMotorin.Location = new System.Drawing.Point(185, 119);
+            this.lbl_UltraforceMotorin.Name = "lbl_UltraforceMotorin";
+            this.lbl_UltraforceMotorin.Size = new System.Drawing.Size(30, 17);
+            this.lbl_UltraforceMotorin.TabIndex = 7;
+            this.lbl_UltraforceMotorin.Text = "null";
             // 
-            // lbl_kursunsuzBenzin
+            // lbl_Kursunsuz95
             // 
-            this.lbl_kursunsuzBenzin.AutoSize = true;
-            this.lbl_kursunsuzBenzin.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lbl_kursunsuzBenzin.ForeColor = System.Drawing.Color.White;
-            this.lbl_kursunsuzBenzin.Location = new System.Drawing.Point(153, 86);
-            this.lbl_kursunsuzBenzin.Name = "lbl_kursunsuzBenzin";
-            this.lbl_kursunsuzBenzin.Size = new System.Drawing.Size(30, 17);
-            this.lbl_kursunsuzBenzin.TabIndex = 6;
-            this.lbl_kursunsuzBenzin.Text = "null";
+            this.lbl_Kursunsuz95.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbl_Kursunsuz95.AutoSize = true;
+            this.lbl_Kursunsuz95.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_Kursunsuz95.ForeColor = System.Drawing.Color.White;
+            this.lbl_Kursunsuz95.Location = new System.Drawing.Point(185, 86);
+            this.lbl_Kursunsuz95.Name = "lbl_Kursunsuz95";
+            this.lbl_Kursunsuz95.Size = new System.Drawing.Size(30, 17);
+            this.lbl_Kursunsuz95.TabIndex = 6;
+            this.lbl_Kursunsuz95.Text = "null";
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(25, 219);
+            this.label6.Location = new System.Drawing.Point(72, 213);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 17);
+            this.label6.Size = new System.Drawing.Size(78, 17);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Gaz";
+            this.label6.Text = "Gaz (LPG)";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(25, 168);
+            this.label5.Location = new System.Drawing.Point(72, 167);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 34);
+            this.label5.Size = new System.Drawing.Size(76, 17);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Eco Force\r\n(Motorin)";
+            this.label5.Text = "Eco Force";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(25, 119);
+            this.label4.Location = new System.Drawing.Point(72, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 34);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Ultra Force \r\n(Motorin)";
+            this.label4.Text = "Ultra Force \r\nMotorin";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 86);
+            this.label3.Location = new System.Drawing.Point(72, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 17);
             this.label3.TabIndex = 2;
@@ -209,10 +277,11 @@ namespace PetrolİstasyonSistemi_18
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(153, 42);
+            this.label2.Location = new System.Drawing.Point(185, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 18);
             this.label2.TabIndex = 1;
@@ -220,10 +289,11 @@ namespace PetrolİstasyonSistemi_18
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 42);
+            this.label1.Location = new System.Drawing.Point(72, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 18);
             this.label1.TabIndex = 0;
@@ -231,26 +301,22 @@ namespace PetrolİstasyonSistemi_18
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.groupBox2.Controls.Add(this.label26);
             this.groupBox2.Controls.Add(this.label21);
             this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Controls.Add(this.progress_Arac1);
-            this.groupBox2.Controls.Add(this.label23);
             this.groupBox2.Controls.Add(this.progress_Arac4);
             this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.progress_Arac3);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.progress_Arac5);
             this.groupBox2.Controls.Add(this.progress_Arac2);
-            this.groupBox2.Location = new System.Drawing.Point(649, 301);
+            this.groupBox2.Location = new System.Drawing.Point(600, 323);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(578, 305);
+            this.groupBox2.Size = new System.Drawing.Size(628, 276);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -259,18 +325,18 @@ namespace PetrolİstasyonSistemi_18
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(215, 35);
+            this.label26.Location = new System.Drawing.Point(248, 21);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(129, 24);
+            this.label26.Size = new System.Drawing.Size(177, 24);
             this.label26.TabIndex = 36;
-            this.label26.Text = "Depo Miktarı";
+            this.label26.Text = "Depo Stok Miktarı";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(16, 97);
+            this.label21.Location = new System.Drawing.Point(63, 85);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(75, 17);
             this.label21.TabIndex = 36;
@@ -281,7 +347,7 @@ namespace PetrolİstasyonSistemi_18
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(20, 134);
+            this.label22.Location = new System.Drawing.Point(63, 122);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(71, 17);
             this.label22.TabIndex = 37;
@@ -289,8 +355,7 @@ namespace PetrolİstasyonSistemi_18
             // 
             // progress_Arac1
             // 
-            this.progress_Arac1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progress_Arac1.Location = new System.Drawing.Point(97, 81);
+            this.progress_Arac1.Location = new System.Drawing.Point(140, 69);
             this.progress_Arac1.Maximum = 10000;
             this.progress_Arac1.Name = "progress_Arac1";
             this.progress_Arac1.Size = new System.Drawing.Size(405, 33);
@@ -298,22 +363,9 @@ namespace PetrolİstasyonSistemi_18
             this.progress_Arac1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progress_Arac1.TabIndex = 26;
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(16, 246);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(75, 17);
-            this.label23.TabIndex = 40;
-            this.label23.Text = "5. Pompa:";
-            this.label23.Visible = false;
-            // 
             // progress_Arac4
             // 
-            this.progress_Arac4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progress_Arac4.Location = new System.Drawing.Point(97, 194);
+            this.progress_Arac4.Location = new System.Drawing.Point(140, 182);
             this.progress_Arac4.Maximum = 10000;
             this.progress_Arac4.Name = "progress_Arac4";
             this.progress_Arac4.Size = new System.Drawing.Size(405, 31);
@@ -326,31 +378,18 @@ namespace PetrolİstasyonSistemi_18
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label24.ForeColor = System.Drawing.Color.White;
-            this.label24.Location = new System.Drawing.Point(16, 171);
+            this.label24.Location = new System.Drawing.Point(63, 159);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(75, 17);
             this.label24.TabIndex = 38;
             this.label24.Text = "3. Pompa:";
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(508, 245);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(28, 17);
-            this.label18.TabIndex = 35;
-            this.label18.Text = "0 L";
-            this.label18.Visible = false;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label25.ForeColor = System.Drawing.Color.White;
-            this.label25.Location = new System.Drawing.Point(16, 208);
+            this.label25.Location = new System.Drawing.Point(63, 196);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(75, 17);
             this.label25.TabIndex = 39;
@@ -358,11 +397,10 @@ namespace PetrolİstasyonSistemi_18
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(508, 171);
+            this.label16.Location = new System.Drawing.Point(551, 151);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(28, 17);
             this.label16.TabIndex = 31;
@@ -370,11 +408,10 @@ namespace PetrolİstasyonSistemi_18
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(508, 134);
+            this.label15.Location = new System.Drawing.Point(551, 114);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(28, 17);
             this.label15.TabIndex = 29;
@@ -382,11 +419,10 @@ namespace PetrolİstasyonSistemi_18
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(508, 97);
+            this.label14.Location = new System.Drawing.Point(551, 77);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(28, 17);
             this.label14.TabIndex = 27;
@@ -394,8 +430,7 @@ namespace PetrolİstasyonSistemi_18
             // 
             // progress_Arac3
             // 
-            this.progress_Arac3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progress_Arac3.Location = new System.Drawing.Point(97, 157);
+            this.progress_Arac3.Location = new System.Drawing.Point(140, 145);
             this.progress_Arac3.Maximum = 10000;
             this.progress_Arac3.Name = "progress_Arac3";
             this.progress_Arac3.Size = new System.Drawing.Size(405, 31);
@@ -405,32 +440,18 @@ namespace PetrolİstasyonSistemi_18
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(508, 208);
+            this.label17.Location = new System.Drawing.Point(551, 188);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(28, 17);
             this.label17.TabIndex = 33;
             this.label17.Text = "0 L";
             // 
-            // progress_Arac5
-            // 
-            this.progress_Arac5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progress_Arac5.Location = new System.Drawing.Point(97, 231);
-            this.progress_Arac5.Maximum = 10000;
-            this.progress_Arac5.Name = "progress_Arac5";
-            this.progress_Arac5.Size = new System.Drawing.Size(405, 31);
-            this.progress_Arac5.Step = 1;
-            this.progress_Arac5.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progress_Arac5.TabIndex = 34;
-            this.progress_Arac5.Visible = false;
-            // 
             // progress_Arac2
             // 
-            this.progress_Arac2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.progress_Arac2.Location = new System.Drawing.Point(97, 120);
+            this.progress_Arac2.Location = new System.Drawing.Point(140, 108);
             this.progress_Arac2.Maximum = 10000;
             this.progress_Arac2.Name = "progress_Arac2";
             this.progress_Arac2.Size = new System.Drawing.Size(405, 31);
@@ -557,37 +578,37 @@ namespace PetrolİstasyonSistemi_18
             // 
             // txt_GazTutar
             // 
-            this.txt_GazTutar.Enabled = false;
             this.txt_GazTutar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_GazTutar.Location = new System.Drawing.Point(348, 208);
             this.txt_GazTutar.Name = "txt_GazTutar";
+            this.txt_GazTutar.ReadOnly = true;
             this.txt_GazTutar.Size = new System.Drawing.Size(143, 25);
             this.txt_GazTutar.TabIndex = 14;
             // 
             // txt_EcoforceTutar
             // 
-            this.txt_EcoforceTutar.Enabled = false;
             this.txt_EcoforceTutar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_EcoforceTutar.Location = new System.Drawing.Point(348, 167);
             this.txt_EcoforceTutar.Name = "txt_EcoforceTutar";
+            this.txt_EcoforceTutar.ReadOnly = true;
             this.txt_EcoforceTutar.Size = new System.Drawing.Size(143, 25);
             this.txt_EcoforceTutar.TabIndex = 10;
             // 
             // txt_MotorinTutar
             // 
-            this.txt_MotorinTutar.Enabled = false;
             this.txt_MotorinTutar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_MotorinTutar.Location = new System.Drawing.Point(348, 126);
             this.txt_MotorinTutar.Name = "txt_MotorinTutar";
+            this.txt_MotorinTutar.ReadOnly = true;
             this.txt_MotorinTutar.Size = new System.Drawing.Size(143, 25);
             this.txt_MotorinTutar.TabIndex = 6;
             // 
             // txt_Ultraforce95Tutar
             // 
-            this.txt_Ultraforce95Tutar.Enabled = false;
             this.txt_Ultraforce95Tutar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txt_Ultraforce95Tutar.Location = new System.Drawing.Point(348, 86);
             this.txt_Ultraforce95Tutar.Name = "txt_Ultraforce95Tutar";
+            this.txt_Ultraforce95Tutar.ReadOnly = true;
             this.txt_Ultraforce95Tutar.Size = new System.Drawing.Size(143, 25);
             this.txt_Ultraforce95Tutar.TabIndex = 2;
             // 
@@ -634,34 +655,34 @@ namespace PetrolİstasyonSistemi_18
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(342, 12);
+            this.groupBox3.Location = new System.Drawing.Point(24, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(252, 280);
+            this.groupBox3.Size = new System.Drawing.Size(252, 66);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "İstatistiksel Veriler";
+            this.groupBox3.Text = "Kasa";
             // 
             // lbl_Kasa
             // 
             this.lbl_Kasa.AutoSize = true;
-            this.lbl_Kasa.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_Kasa.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_Kasa.ForeColor = System.Drawing.Color.White;
-            this.lbl_Kasa.Location = new System.Drawing.Point(138, 43);
+            this.lbl_Kasa.Location = new System.Drawing.Point(122, 27);
             this.lbl_Kasa.Name = "lbl_Kasa";
-            this.lbl_Kasa.Size = new System.Drawing.Size(30, 17);
+            this.lbl_Kasa.Size = new System.Drawing.Size(34, 18);
             this.lbl_Kasa.TabIndex = 37;
             this.lbl_Kasa.Text = "null";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(32, 43);
+            this.label19.Location = new System.Drawing.Point(23, 27);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 17);
+            this.label19.Size = new System.Drawing.Size(102, 18);
             this.label19.TabIndex = 36;
-            this.label19.Text = "Kasa Toplamı:";
+            this.label19.Text = "Toplam Gelir:";
             // 
             // groupBox4
             // 
@@ -695,9 +716,9 @@ namespace PetrolİstasyonSistemi_18
             this.groupBox4.Controls.Add(this.txt_GazLitre);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(12, 301);
+            this.groupBox4.Location = new System.Drawing.Point(600, 12);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(619, 305);
+            this.groupBox4.Size = new System.Drawing.Size(628, 291);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Araç Bilgi Ekranı";
@@ -730,6 +751,7 @@ namespace PetrolİstasyonSistemi_18
             this.btn_GazDoldur.TabIndex = 15;
             this.btn_GazDoldur.Text = "Doldur";
             this.btn_GazDoldur.UseVisualStyleBackColor = false;
+            this.btn_GazDoldur.Click += new System.EventHandler(this.btn_GazDoldur_Click);
             // 
             // btn_EcoforceDoldur
             // 
@@ -744,6 +766,7 @@ namespace PetrolİstasyonSistemi_18
             this.btn_EcoforceDoldur.TabIndex = 11;
             this.btn_EcoforceDoldur.Text = "Doldur";
             this.btn_EcoforceDoldur.UseVisualStyleBackColor = false;
+            this.btn_EcoforceDoldur.Click += new System.EventHandler(this.btn_EcoforceDoldur_Click);
             // 
             // btn_MotorinDoldur
             // 
@@ -758,6 +781,7 @@ namespace PetrolİstasyonSistemi_18
             this.btn_MotorinDoldur.TabIndex = 7;
             this.btn_MotorinDoldur.Text = "Doldur";
             this.btn_MotorinDoldur.UseVisualStyleBackColor = false;
+            this.btn_MotorinDoldur.Click += new System.EventHandler(this.btn_MotorinDoldur_Click);
             // 
             // label20
             // 
@@ -818,21 +842,89 @@ namespace PetrolİstasyonSistemi_18
             this.dataGrid1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid1.BackgroundColor = System.Drawing.Color.MidnightBlue;
             this.dataGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.MidnightBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGrid1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.MidnightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGrid1.GridColor = System.Drawing.SystemColors.GrayText;
-            this.dataGrid1.Location = new System.Drawing.Point(649, 12);
+            this.dataGrid1.Location = new System.Drawing.Point(12, 323);
             this.dataGrid1.Name = "dataGrid1";
             this.dataGrid1.ReadOnly = true;
             this.dataGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGrid1.Size = new System.Drawing.Size(578, 280);
+            this.dataGrid1.Size = new System.Drawing.Size(578, 276);
             this.dataGrid1.TabIndex = 4;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btn_Login);
+            this.groupBox5.Controls.Add(this.txt_Password);
+            this.groupBox5.Controls.Add(this.txt_Username);
+            this.groupBox5.Controls.Add(this.lbl_Password);
+            this.groupBox5.Controls.Add(this.lbl_Username);
+            this.groupBox5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.Location = new System.Drawing.Point(24, 97);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(252, 206);
+            this.groupBox5.TabIndex = 38;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Kontrol Paneli Girişi";
+            // 
+            // btn_Login
+            // 
+            this.btn_Login.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_Login.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Login.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_Login.ForeColor = System.Drawing.Color.White;
+            this.btn_Login.Location = new System.Drawing.Point(108, 126);
+            this.btn_Login.Name = "btn_Login";
+            this.btn_Login.Size = new System.Drawing.Size(112, 41);
+            this.btn_Login.TabIndex = 34;
+            this.btn_Login.Text = "Login";
+            this.btn_Login.UseVisualStyleBackColor = false;
+            // 
+            // txt_Password
+            // 
+            this.txt_Password.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_Password.Location = new System.Drawing.Point(108, 82);
+            this.txt_Password.Name = "txt_Password";
+            this.txt_Password.Size = new System.Drawing.Size(112, 25);
+            this.txt_Password.TabIndex = 33;
+            // 
+            // txt_Username
+            // 
+            this.txt_Username.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_Username.Location = new System.Drawing.Point(108, 44);
+            this.txt_Username.Name = "txt_Username";
+            this.txt_Username.Size = new System.Drawing.Size(112, 25);
+            this.txt_Username.TabIndex = 32;
+            // 
+            // lbl_Password
+            // 
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_Password.ForeColor = System.Drawing.Color.White;
+            this.lbl_Password.Location = new System.Drawing.Point(24, 84);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(78, 17);
+            this.lbl_Password.TabIndex = 39;
+            this.lbl_Password.Text = "Password:";
+            // 
+            // lbl_Username
+            // 
+            this.lbl_Username.AutoSize = true;
+            this.lbl_Username.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lbl_Username.ForeColor = System.Drawing.Color.White;
+            this.lbl_Username.Location = new System.Drawing.Point(22, 47);
+            this.lbl_Username.Name = "lbl_Username";
+            this.lbl_Username.Size = new System.Drawing.Size(80, 17);
+            this.lbl_Username.TabIndex = 38;
+            this.lbl_Username.Text = "Username:";
             // 
             // Form1
             // 
@@ -840,7 +932,8 @@ namespace PetrolİstasyonSistemi_18
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1240, 618);
+            this.ClientSize = new System.Drawing.Size(1236, 607);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.dataGrid1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -848,6 +941,7 @@ namespace PetrolİstasyonSistemi_18
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -862,6 +956,8 @@ namespace PetrolİstasyonSistemi_18
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid1)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -869,10 +965,10 @@ namespace PetrolİstasyonSistemi_18
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbl_gaz;
+        private System.Windows.Forms.Label lbl_Gaz;
         private System.Windows.Forms.Label lbl_ecoforceMotorin;
-        private System.Windows.Forms.Label lbl_ultraforceMotorin;
-        private System.Windows.Forms.Label lbl_kursunsuzBenzin;
+        private System.Windows.Forms.Label lbl_UltraforceMotorin;
+        private System.Windows.Forms.Label lbl_Kursunsuz95;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -882,13 +978,11 @@ namespace PetrolİstasyonSistemi_18
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ProgressBar progress_Arac1;
         private System.Windows.Forms.ProgressBar progress_Arac4;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ProgressBar progress_Arac3;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ProgressBar progress_Arac5;
         private System.Windows.Forms.ProgressBar progress_Arac2;
         private System.Windows.Forms.TextBox txt_Ultraforce95Litre;
         private System.Windows.Forms.Label label7;
@@ -921,7 +1015,6 @@ namespace PetrolİstasyonSistemi_18
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button4;
@@ -929,6 +1022,16 @@ namespace PetrolİstasyonSistemi_18
         private System.Windows.Forms.Button btn_EcoforceDoldur;
         private System.Windows.Forms.Button btn_MotorinDoldur;
         private System.Windows.Forms.DataGridView dataGrid1;
+        private System.Windows.Forms.RadioButton rdbtn_Kursunsuz95;
+        private System.Windows.Forms.RadioButton rdbtn_Gaz;
+        private System.Windows.Forms.RadioButton rdbtn_EcoforceMotorin;
+        private System.Windows.Forms.RadioButton rdbtn_UltraforceMotorin;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btn_Login;
+        private System.Windows.Forms.TextBox txt_Password;
+        private System.Windows.Forms.TextBox txt_Username;
+        private System.Windows.Forms.Label lbl_Password;
+        private System.Windows.Forms.Label lbl_Username;
     }
 }
 
