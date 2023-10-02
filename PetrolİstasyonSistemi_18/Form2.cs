@@ -18,7 +18,7 @@ namespace PetrolİstasyonSistemi_18
             InitializeComponent();
         }
 
-        SqlConnection connect = new SqlConnection(@"Data Source=LAPTOP-ONATSOFT\ONATSOFT;Initial Catalog=PetrolTestDB;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"");
 
         private void Form2_Load(object sender, EventArgs e)
         {
