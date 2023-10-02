@@ -19,6 +19,15 @@ namespace PetrolİstasyonSistemi_18
         }
         SqlConnection connect = new SqlConnection(@"Data Source=LAPTOP-ONATSOFT\ONATSOFT;Initial Catalog=PetrolTestDB;Integrated Security=True");
 
+        public string Ultraforce95Fiyat;
+        public string UltraforceFiyat;
+        public string EcoforceFiyat;
+        public string GazFiyat;
+
+        public int Ultraforce95Litre;
+        public int UltraforceLitre;
+        public int EcoforceLitre;
+        public int GazLitre;
         private void fiyatListesi()
         {
             connect.Open();
@@ -29,6 +38,7 @@ namespace PetrolİstasyonSistemi_18
                 lbl_Kursunsuz95.Text = DR[3].ToString();
                 progress_Arac1.Value = int.Parse(DR[4].ToString());
                 label14.Text = progress_Arac1.Value + " L";
+                Ultraforce95Fiyat = lbl_Kursunsuz95.Text;
             }
             connect.Close();
 
@@ -40,6 +50,7 @@ namespace PetrolİstasyonSistemi_18
                 lbl_UltraforceMotorin.Text = dr2[3].ToString();
                 progress_Arac2.Value = int.Parse(dr2[4].ToString());
                 label15.Text = progress_Arac2.Value + " L";
+                UltraforceFiyat = lbl_UltraforceMotorin.Text;
             }
             connect.Close();
 
@@ -48,9 +59,10 @@ namespace PetrolİstasyonSistemi_18
             SqlDataReader dr3 = cmd3.ExecuteReader();
             while (dr3.Read())
             {
-                lbl_ecoforceMotorin.Text = dr3[3].ToString();
+                lbl_EcoforceMotorin.Text = dr3[3].ToString();
                 progress_Arac3.Value = int.Parse(dr3[4].ToString());
                 label16.Text = progress_Arac3.Value + " L";
+                EcoforceFiyat = lbl_EcoforceMotorin.Text;
             }
             connect.Close();
 
@@ -62,9 +74,11 @@ namespace PetrolİstasyonSistemi_18
                 lbl_Gaz.Text = dr4[3].ToString();
                 progress_Arac4.Value = int.Parse(dr4[4].ToString());
                 label17.Text = progress_Arac4.Value + " L";
+                GazFiyat = lbl_Gaz.Text;
             }
             connect.Close();
         }
+
 
         private void listele()
         {
@@ -124,7 +138,7 @@ namespace PetrolİstasyonSistemi_18
                 txt_EcoforceLitre.Text = "0";
             }
             double ecoforceMtr, litre, tutar;
-            ecoforceMtr = Convert.ToDouble(lbl_ecoforceMotorin.Text);
+            ecoforceMtr = Convert.ToDouble(lbl_EcoforceMotorin.Text);
             litre = Convert.ToDouble(txt_EcoforceLitre.Text);
             tutar = ecoforceMtr * litre;
             txt_EcoforceTutar.Text = tutar.ToString();
@@ -341,6 +355,34 @@ namespace PetrolİstasyonSistemi_18
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString(), "Beklenmeyen bir sorun oluştu!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            string username = "ADMIN";
+            string password = "admin2002";
+
+            if (username != txt_Username.Text || password != txt_Password.Text)
+            {
+                lbl_Username.BackColor = Color.OrangeRed;
+                lbl_Password.BackColor = Color.OrangeRed;
+                MessageBox.Show("Kullanıcı adı veya Parola hatalı girildi! Lütfen renkli alanların doğru olup olmadığını kontrol ederek tekrar deneyiniz.", "HATALI GİRİŞ");
+            }
+            else
+            {
+                Form2 frm2 = new Form2();
+                frm2.txt_SatisUltraforce95.Text = Ultraforce95Fiyat;
+                frm2.txt_SatisUltraforce.Text = UltraforceFiyat;
+                frm2.txt_SatisEcoforce.Text = EcoforceFiyat;
+                frm2.txt_SatisLPG.Text = GazFiyat;
+
+                frm2.label12.Text = label14.Text + "/10.000";
+                frm2.label13.Text = label15.Text + "/10.000";
+                frm2.label14.Text = label16.Text + "/10.000";
+                frm2.label15.Text = label17.Text + "/10.000";
+                frm2.Show();
+                this.Hide();
             }
         }
     }
