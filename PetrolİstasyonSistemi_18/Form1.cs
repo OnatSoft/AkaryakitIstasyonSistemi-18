@@ -17,7 +17,7 @@ namespace PetrolİstasyonSistemi_18
         {
             InitializeComponent();
         }
-        SqlConnection connect = new SqlConnection(@"Data Source=LAPTOP-ONATSOFT\ONATSOFT;Initial Catalog=PetrolTestDB;Integrated Security=True");
+        SqlConnection connect = new SqlConnection(@"");
 
         public string Ultraforce95Fiyat;
         public string UltraforceFiyat;
